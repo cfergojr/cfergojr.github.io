@@ -78,7 +78,7 @@ $headers = 'From: '.$email_from."\r\n".
     function post_captcha($user_response) {
         $fields_string = '';
         $fields = array(
-            'secret' => '6LfIrc4aAAAAAECQv4ingC8qTGoc_uTHtnc0JUVb',
+            'secret' => '6LeMKlUdAAAAADHKLj_lXuf8SWRfK0NZRM6C3FSL',
             'response' => $user_response
         );
         foreach($fields as $key=>$value)
