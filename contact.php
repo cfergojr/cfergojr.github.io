@@ -141,7 +141,7 @@ $headers = 'From: '.$email_from."\r\n".
         <div class="col-sm-6 col-sm-offset-3">
         <br><br> <h2 style="color:#2b90d9">Thank You for your submission.</h2>
         <p style="font-size:20px;color:#666;">Thank you for your inquiry to ChrisFergoJr.com. I will be in touch with you shortly.</p>
-        <a href="http://www.chrisfergojr.com" type="button" class="btn btn-primary"> &laquo; Back</a>
+        <a href="https://cfergojr.github.io/" type="button" class="btn btn-primary"> &laquo; Back</a>
     <br><br>
         </div>
         
