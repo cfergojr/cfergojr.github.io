@@ -6,13 +6,12 @@ let wordle
 
 const getWordle = () => {
     fetch('/word')
-        .then(response => response.text())
-        .then(text => {
-            wordle = text.toUpperCase()
+        .then(response => response.json())
+        .then(json => {
+            wordle = json.toUpperCase()
         })
         .catch(err => console.log(err))
 }
-
 getWordle()
 
 const keys = [
@@ -117,9 +116,9 @@ const checkRow = () => {
     const guess = guessRows[currentRow].join('')
     if (currentTile > 4) {
     fetch('/check/?word=${guess}')
-        .then(response => response.text())
-        .then(text => {
-            if (text == 'Entry word not found') {
+        .then(response => response.json())
+        .then(json => {
+            if (json == 'Entry word not found') {
                 showMessage('Not in word list')
                 return
             } else {
