@@ -547,6 +547,8 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ee1742 !important; }
 
 .box { background-color: white; border-radius: 6px; box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8; color: #141c3a; display: block; padding: 1.25rem; }
 
+.box h2 {font-size: 2.8rem; margin-bottom: 15px;}
+
 a.box:hover, a.box:focus { box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px #3273dc; }
 
 a.box:active { box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #3273dc; }
