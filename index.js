@@ -1,4 +1,6 @@
-const PORT = 8000
+const PORT = process.env.PORT || 5000;
+const path = require('path');
+const cool = require('cool-ascii-faces');
 const axios = require("axios").default
 const express = require("express")
 const cors = require("cors")
@@ -47,4 +49,10 @@ app.get('/check', (req, res) => {
   })
 })
 
-app.listen(PORT, () => console.log("Server running on port " + PORT))
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index'))
+  .get('/cool', (req, res) => res.send(cool()))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
