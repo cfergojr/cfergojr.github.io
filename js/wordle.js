@@ -2,17 +2,7 @@ const tileDisplay = document.querySelector('.tile-container')
 const keyboard = document.querySelector('.key-container')
 const messageDisplay = document.querySelector('.message-container')
 
-let wordle
-
-const getWordle = () => {
-    fetch('/word')
-        .then(response => response.json())
-        .then(json => {
-            wordle = json.toUpperCase()
-        })
-        .catch(err => console.log(err))
-}
-getWordle()
+const wordle = 'HIRED'
 
 const keys = [
     'Q',
@@ -115,31 +105,27 @@ const deleteLetter = () => {
 const checkRow = () => {
     const guess = guessRows[currentRow].join('')
     if (currentTile > 4) {
-    fetch('/check/?word=${guess}')
-        .then(response => response.json())
-        .then(json => {
-            if (json == 'Entry word not found') {
-                showMessage('Not in word list')
+        if (wordle == 'Entry word not found') {
+            showMessage('Not a word')
+            return
+        } else {
+            flipTile()
+            if (wordle == guess) {
+                showMessage('Congratulations, you solved Wordle!')
+                isGameOver = true
                 return
             } else {
-                flipTile()
-                if (wordle == guess) {
-                    showMessage('Congratulations, you solved Wordle!')
+                if (currentRow >= 5) {
                     isGameOver = true
+                    showMessage('Game Over')
                     return
-                } else {
-                    if (currentRow >= 5) {
-                        isGameOver = true
-                        showMessage('Game Over')
-                        return
-                    }
-                    if (currentRow < 5) {
-                        currentRow++
-                        currentTile = 0
-                    }
+                }
+                if (currentRow < 5) {
+                    currentRow++
+                    currentTile = 0
                 }
             }
-        }).catch(err => console.log(err))
+        }
     }
 }
 
