@@ -1,10 +1,9 @@
 .masthead {
-    padding: 1em 2em;
+    padding: .5em 2em;
     font-size: 3rem;
     font-weight: 800;
-    background-color: #ffffff;
-    color: #141c3a;
-    border-bottom: 1px solid #3a3a3c;
+    background-color: #7510F7;
+    color: #fff;
 }
 
 .masthead h1 {
@@ -20,7 +19,7 @@
 }
 
 .message-container {
-    height: 30px;
+    height: 50px;
 }
 
 .message-container p {
