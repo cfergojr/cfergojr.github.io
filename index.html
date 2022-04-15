@@ -27,8 +27,29 @@
         <div class="navbar-brand"><a class="navbar-item" href="#"><img src="img/cf-logo.png" alt="Chris Fergo | Designer, Front-end Developer &amp; mentee" height="48"></a><a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="#navMenu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
         <div class="navbar-menu" id="navMenu">
           <div class="navbar-start"></div>
-            <div class="navbar-item"><a class="button is-primary is-outlined is-rounded" href="mailto:cfergojr@gmail.com">Say Hello</a></div>
+            <div class="navbar-item">
+              <div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Games</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                    <a href="/wordle.html" class="dropdown-item">
+                      Wordle
+                    </a>
+                    <a href="/typing-test.html" class="dropdown-item">
+                      Typing Test
+                    </a>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="navbar-item"><a class="button is-primary is-outlined is-rounded" href="mailto:cfergojr@gmail.com">Say Hello</a></div>
         </div>
       </div>
     </nav>
@@ -235,17 +256,17 @@
           <div class="columns is-multiline level">
             <div class="column is-12-mobile is-half-tablet is-one-third-desktop level-item">
               <div class="box"><img class="logo" src="img/projects/python.svg">
-                <p>Python projects I've worked on including games, file duplicator, and data fetcher.</p><a class="link has-text-primary button" href="https://github.com/cfergojr/Python-projects" target="_blank">Python Projects</a>
+                <p>Python projects I've worked on including games, file duplicator, and data fetcher.</p><a class="link has-text-primary button" href="https://github.com/cfergojr/Python-projects" target="_blank">Python Projects Repo</a>
               </div>
             </div>
             <div class="column is-12-mobile is-half-tablet is-one-third-desktop level-item">
               <div class="box"><img class="logo" src="img/projects/typing-test.png">
-                <p>Who doesn't love a good typing test? This was built using vanilla JavaScript, along with some CSS and HTML.</p><a class="link has-text-primary" href="/typing-test.html" target="_blank">Typing Test</a>
+                <p>Who doesn't love a good typing test? This was built using vanilla JavaScript, along with some CSS and HTML.</p><a class="link has-text-primary" href="/typing-test.html">Typing Test</a>
               </div>
             </div>
             <div class="column is-12-mobile is-half-tablet is-one-third-desktop level-item">
               <div class="box"><h2>WORDLE</h2>
-                <p>Love the trendy new game? Check out my version that uses vanilla JavaScript. Along with some CSS and HTML.</p><a class="link has-text-primary" href="/wordle.html" target="_blank">Wordle</a>
+                <p>Love the trendy new game? Check out my version that uses vanilla JavaScript. Along with some CSS and HTML.</p><a class="link has-text-primary" href="/wordle.html">Play Wordle</a> | <a class="link has-text-primary" href="https://github.com/cfergojr/wordle-app" target="_blank">View Repo</a>
               </div>
             </div>
             <div class="column is-12-mobile is-half-tablet is-one-third-desktop level-item">
@@ -255,7 +276,7 @@
             </div>
             <div class="column is-12-mobile is-half-tablet is-one-third-desktop level-item">     
               <div class="box"><img class="logo" src="img/projects/retropie.png">
-                <p>Built a fully working arcade cabinet using the Raspberry Pi 4b, Retropie OS, &amp; custom hardware.</p><a class="link has-text-primary" href="https://photos.google.com/album/AF1QipNVSIViPfVrvOsL1tX2nfjuhowpl9Q_rzbgcZwN">Retropie Arcade</a>
+                <p>Built a fully working arcade cabinet using the Raspberry Pi 4b, Retropie OS, &amp; custom hardware.</p><a class="link has-text-primary" href="https://photos.google.com/album/AF1QipNVSIViPfVrvOsL1tX2nfjuhowpl9Q_rzbgcZwN">Retropie Arcade Gallery</a>
               </div>
             </div>
             <div class="column is-12-mobile is-half-tablet is-one-third-desktop level-item">
