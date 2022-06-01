@@ -1035,6 +1035,8 @@ a.box:hover, a.box:focus { box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1
 
 a.box:active { box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #3273dc; }
 
+.banner { width: 100%; height: 50px; }
+
 .button { background-color: white; border-color: #dbdbdb; border-width: 1px; color: #363636; cursor: pointer; -webkit-box-pack: center; justify-content: center; padding-bottom: calc(0.5em - 1px); padding-left: 1em; padding-right: 1em; padding-top: calc(0.5em - 1px); text-align: center; white-space: nowrap; }
 
 .button strong { color: inherit; }
@@ -4589,7 +4591,7 @@ footer.section.is-small { padding: 4rem 1.5rem; }
 
 @media screen and (min-width: 769px) { footer.section.is-small { padding: 4rem 1.5rem; } }
 
-footer .title { font-weight: 300; font-size: 1.6rem; margin: 2rem auto; max-width: 300px; opacity: 0.7; }
+footer .title { font-weight: 300; font-size: 1.6rem; margin: 2rem auto; max-width: 300px; opacity: 0.8; }
 
 @media screen and (min-width: 769px) { footer .title { max-width: 320px; } }
 
@@ -4609,11 +4611,9 @@ footer .social-icons a.button .icon.is-small { height: 1.4em; width: 1.4em; }
 
 footer .social-icons a.button:hover { background: white; color: #7510F7; border: 2px solid white; }
 
-footer .copyright { opacity: 0.7; }
+footer .copyright { opacity: 0.8; }
 
 footer .copyright .icon { margin-top: -1px; margin-left: 1px; }
-
-footer .made-by-bulma { opacity: 0.6; margin-top: 0.7rem; }
 
 ::-webkit-scrollbar { width: 6px; border-left: 1px solid #E6ECF8; }
 
