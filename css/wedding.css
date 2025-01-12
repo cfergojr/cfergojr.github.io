@@ -239,12 +239,6 @@ main {
 
 }
 
-/* .navbar a:hover {
-    border-bottom: 2px solid white;
-    margin: 0;
-    padding: 0;
-} */
-
 .masthead {
     margin: 0;
     padding: 1rem 3rem;
@@ -345,7 +339,10 @@ textarea {
 @media screen and (max-width: 1200px) {
     main {
         width: 100%;
-        padding: 0 1rem;
+        padding: 0;
+    }
+    .container {
+        margin: 0 1rem;
     }
     .navbar {
         height: 100px;
@@ -366,5 +363,11 @@ textarea {
 
     .parallax h1 {
         font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar li {
+        padding: 0 .5rem;
     }
 }
