@@ -1,0 +1,235 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.masthead {
+    margin: 0;
+    padding: 1em;
+}
+
+h1 {
+    font-family: "Monsieur La Doulaise", serif;
+    font-weight: 400;
+    font-size: 6rem;
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+h3 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: "Libre Baskerville", Times, serif;
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.intro {
+    background-color: #f5f5f5;
+    width: 100%;
+    color: #333;
+    padding: 1em;
+    text-align: center;
+}
+
+.intro p {
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#countdown-section {
+    display: flex;
+    width: 100%;
+    background-color: #f3f3f3;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+
+.navbar {  
+    display: flex;
+    background-color: #7510F7;
+    color: white;
+    margin-bottom: 1em;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar .logo {
+    font-family: "Libre Baskerville", Times, serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: flex;
+}
+
+.navbar li {
+    display: inline-flex;
+    list-style-type: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar a:hover {
+    border-bottom: 1px solid white;
+}
+
+section {
+    margin: 5rem auto 10rem auto;
+    width: 100%;
+}
+
+section h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+}
+
+section h2::after {
+    border-bottom: 2px solid #333;
+    display: block;
+    width: fit-content;
+
+}
+
+.story-container {
+    width: 100%;
+    display: flex;
+}
+
+.story-aside {
+    display: inline-flex;
+    width: 35%;
+}
+
+.story-aside img {
+    width: 100%;
+    height: auto;
+}
+
+.story-article {
+    display: inline-flex;
+    width: 65%;
+    padding-left: 3rem;
+
+}
+
+.parallax {
+    background-image: url('../img/wedding/chris-and-michelle-walking.webp');
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.parallax h1 {
+    font-size: 8rem;
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+textarea {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+#rsvp button {
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    background-color: #7510F7;
+    padding: 1em;
+    border: none;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .navbar {
+        height: 100px;
+        padding: 0 1rem;
+
+    }
+    .parallax {
+        min-height: 100vh;
+    }
+    .story-aside {
+        display: none;
+    }
+
+    .story-article {
+        width: 100%;
+    }
+
+    .parallax h1 {
+        font-size: 4rem;
+    }
+    
+}

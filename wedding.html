@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Christopher & Michelle</title>
+    <script src="js/wedding.js" async></script>
+    <link href="img/favicon-32x32.png" rel="shortcut icon" type="image/png">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/wedding.css">
+</head>
+
+<body>
+    <nav class="navbar">
+       <div class="container">
+        <span class="logo">M&C</span>
+
+        <ul>
+            <li><a href="#wedding">Wedding</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+        </div>
+    </nav>
+    <main class="main">
+            <div class="parallax">
+                <div class="container">
+                    <header class="masthead">
+                        <h1>Christopher &amp; Michelle</h1>
+                    </header>
+                </div>
+            </div>
+
+            <section id="wedding" anchor="wedding">
+                <div class="container">
+                    <h2>Wedding</h2>
+                    <p>Our wedding will be held at <a href="https://www.lessings.com/corporate/weddings/venue/mansion-at-timber-point" target="_blank"><strong>The Mansion at Timber Point</strong></a> in East Islip, NY on March 30<sup>th</sup>, 2025. The ceremony will begin at 4:00 PM followed by a cocktail hour and reception. We hope you can join us for this special day.</p>
+                </div>
+            </section><!-- #wedding --> 
+
+            <section id="countdown-section">
+                <div class="container">
+                    <h2>Countdown to the Big Day</h2>
+                    <p><span id="countdown"></span></p>
+                </div>
+            </section>
+
+            <section id="story" anchor="story">
+                <div class="container">
+                    <h2>Our Story</h2>
+                    <div class="story-container">
+                        <div class="story-aside">
+                            <img src="img/wedding/chris-and-michelle-sitting.jpg" alt="Michelle and Christopher" class="story-image">
+                        </div>
+
+                        <div class="story-article">
+                            <p>A five-year journey that began with a text exchange on the dating app <em>Hinge</em> and a first date at the <em>Library Cafe</em>.<br /><br />
+
+                            After a year and a half of dating, Michelle and Christopher moved into a cozy apartment together in West Babylon. A year later they added to their family, adopting a chihuahua-rat terrier mix named Scarlet.<br /><br />
+                                
+                            Over the course of their relationship, Michelle and Christopher have navigated major challenges, including a global pandemic, the loss of several loved ones, and the uncertain state of U.S. democracy. Through it all, their love for each other has remained steadfast.<br /><br />
+                                
+                            Marking their five-year anniversary, Christopher finally got down on one knee to tie the knot officially.</p>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- #story -->   
+
+            <section id="rsvp" anchor="rsvp">
+                <div class="container">
+                    <h2>RSVP</h2>
+                    <form id="rsvp-form" action="rsvp.php" method="post">
+                        <label for="name">Name(s):</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="guests">Number of Guests:</label>
+                        <input type="number" id="guests" name="guests" required>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form> 
+                </div>
+            </section><!-- #rsvp -->
+        </div>
+    </main>
+    <footer class="section is-primary is-small has-text-centered">
+        <div class="container is-narrow"><img class="logo" src="img/cf-logo-white.png" alt="Chris Fergo | Designer, Front-end Developer &amp; mentee" style="height:48px;">
+          <div class="columns is-centered"> 
+            <div class="column is-one-third">
+              <h1 class="title is-size-4-touch">Living, learning, &amp; leveling up one day at a time.</h1>
+            </div>
+          </div>
+          <div class="social-icons">
+            <p class="field"><a class="button is-medium" href="https://www.github.com/cfergojr" target="_blank"><span class="icon is-small"><i class="fab fa-github fa-fw"></i></span></a><a class="button is-medium" href="https://dribbble.com/cfergojr" target="_blank"><span class="icon is-small"><i class="fab fa-dribbble fa-fw"></i></span></a><a class="button is-medium" href="https://www.linkedin.com/in/cfergojr" target="_blank"><span class="icon is-small"><i class="fab fa-linkedin-in fa-fw"></i></span></a><a class="button is-medium"  href="mailto:cfergojr@gmail.com"><span class="icon is-small"><i class="far fa-envelope fa-fw"></i></span></a></p>
+          </div>
+          <div class="copyright">Handcrafted by me &copy;<span id="year"></span></div>
+        </div>
+      </footer>
+      <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+      </script>
+      <script src="https://kit.fontawesome.com/0eea0b5636.js" crossorigin="anonymous"></script>
+</body>
+</html>
