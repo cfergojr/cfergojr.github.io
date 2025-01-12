@@ -76,13 +76,13 @@
                     <h2>RSVP</h2>
                     <form id="rsvp-form" action="https://formspree.io/f/mjkklvqb" method="post">
                         <label for="name">Name(s):</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required>
                         <label for="guests">Number of Guests:</label>
-                        <input type="number" id="guests" name="guests" min="1" max="4" required>
+                        <input type="number" id="guests" title="Enter between 1 and 2" placeholder="Enter guest amount (including yourself)" name="guests" min="1" max="2" required>
                         <label for="message">Message:</label>
-                        <textarea id="message" name="message"></textarea>
+                        <textarea id="message" name="message" placeholder="Let us know if you have any special requirements / accomodations."></textarea>
                         <button type="submit">Submit</button>
                     </form> 
                 </div>

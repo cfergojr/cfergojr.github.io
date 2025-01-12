@@ -1,11 +1,118 @@
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: 'Source Sans Pro', 'Helvetica', Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+Layout
+--------------------------------------------------------------*/
 
 body {
     margin: 0;
     padding: 0;
 }
-.masthead {
-    margin: 0;
-    padding: 1em;
+
+section {
+    margin: 4rem auto;
+    width: 100%;
 }
 
 h1 {
@@ -43,18 +150,6 @@ p {
     padding: 0;
 }
 
-.intro {
-    background-color: #f5f5f5;
-    width: 100%;
-    color: #333;
-    padding: 1em;
-    text-align: center;
-}
-
-.intro p {
-    margin: 0 auto;
-}
-
 .container {
     max-width: 1200px;
 }
@@ -74,7 +169,6 @@ main {
     padding: 3rem 0;
     text-align: center;
 }
-
 
 .navbar {  
     display: flex;
@@ -104,7 +198,7 @@ main {
 
 .navbar .logo {
     font-family: "Libre Baskerville", Times, serif;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     font-weight: 700;
     display: flex;
 }
@@ -112,22 +206,73 @@ main {
 .navbar li {
     display: inline-flex;
     list-style-type: none;
+    padding: 0 1rem;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
 }
 
-.navbar a:hover {
-    border-bottom: 1px solid white;
-}
-
-section {
-    margin: 5rem auto 10rem auto;
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    height: 0.1em;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+	transform: scale(0);
+	transform-origin: center;
+}
+
+.navbar a:hover::after,
+.navbar a:focus::after {
+    opacity: 1;
+	transform: translate3d(0, 0.2em, 0);
+    transform: scale(1);
+
+}
+
+/* .navbar a:hover {
+    border-bottom: 2px solid white;
+    margin: 0;
+    padding: 0;
+} */
+
+.masthead {
+    margin: 0;
+    padding: 1rem 3rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.parallax {
+    background-image: url('../img/wedding/chris-and-michelle-walking.webp');
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.parallax h1 {
+    font-size: 8rem;
+    color: white;
+
 }
 
 section h2 {
@@ -135,6 +280,7 @@ section h2 {
     text-align: center;
     padding-bottom: .5rem;
     margin-bottom: 1rem;
+    text-decoration: underline;
 }
 
 section h2::after {
@@ -163,26 +309,6 @@ section h2::after {
     display: inline-flex;
     width: 65%;
     padding-left: 3rem;
-
-}
-
-.parallax {
-    background-image: url('../img/wedding/chris-and-michelle-walking.webp');
-    background-attachment: fixed;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-.parallax h1 {
-    font-size: 8rem;
-    color: white;
 }
 
 input {
