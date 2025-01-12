@@ -226,10 +226,10 @@ textarea {
 
     .story-article {
         width: 100%;
+        padding: 0;
     }
 
     .parallax h1 {
         font-size: 4rem;
     }
-    
 }
