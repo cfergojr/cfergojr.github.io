@@ -336,6 +336,12 @@ textarea {
     background-color: #5e0ccf;
 }
 
+@supports (-webkit-touch-callout: inherit) {
+    .parallax {
+    background-attachment: scroll;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     main {
         width: 100%;
