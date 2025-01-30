@@ -338,8 +338,36 @@ textarea {
 
 @supports (-webkit-touch-callout: inherit) {
     .parallax {
-    background-attachment: scroll;
+        background-attachment: scroll;
     }
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #7510F7;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.floating-button:hover , .floating-button:active {
+    background-color: #5e0ccf;
+}
+
+.floating-button a {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.45rem;
 }
 
 @media screen and (max-width: 1200px) {
