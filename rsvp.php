@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Email settings
-    $to = "cfergojr.com";
+    $to = "cfergojr@gmail.com";
     $to .= ", michellehcim14@gmail.com";
     $subject = "New RSVP Submission";
     $headers = "From: $email\r\n";
