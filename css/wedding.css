@@ -336,6 +336,15 @@ textarea {
     background-color: #5e0ccf;
 }
 
+#rsvp h2 {
+    margin-bottom: 0;
+}
+#rsvp .message-note {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
 @supports (-webkit-touch-callout: inherit) {
     .parallax {
         background-attachment: scroll;
