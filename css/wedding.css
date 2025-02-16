@@ -422,6 +422,18 @@ textarea {
     }
 }
 
+@media screen and (max-width: 768px) {
+
+  #countdown-section li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  #countdown-section li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+
+
 @media screen and (max-width: 400px) {
     .navbar li {
         padding: 0 .5rem;
