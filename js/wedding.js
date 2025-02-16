@@ -1,46 +1,43 @@
-// Anchor Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetElement = document.querySelector(this.getAttribute('href'));
-        const offset = 100;
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - offset;
 
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    });
-});
+(function () {
+const second = 1000,
+ minute = second * 60,
+ hour = minute * 60,
+ day = hour * 24;
 
+//I'm adding this section so I don't have to keep updating this pen every year :-)
+//remove this if you don't need it
+let today = new Date(),
+dd = String(today.getDate()).padStart(2, "0"),
+mm = String(today.getMonth() + 1).padStart(2, "0"),
+yyyy = today.getFullYear(),
+dayMonth = "03/30/",
+birthday = dayMonth + yyyy;
 
-// Countdown
+today = mm + "/" + dd + "/" + yyyy;
+if (today > birthday) {
+birthday = dayMonth + nextYear;
+}
+//end
 
-function updateCountdown() {
-    // Target date: March 30th, 2025
-    const targetDate = new Date('2025-03-30T00:00:00');
-    const now = new Date();
+const countDown = new Date(birthday).getTime(),
+x = setInterval(function() {    
 
-    // Calculate the difference in milliseconds
-    const diff = targetDate - now;
+ const now = new Date().getTime(),
+       distance = countDown - now;
 
-    if (diff > 0) {
-      // Convert the difference to days, hours, minutes, and seconds
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+ document.getElementById("days").innerText = Math.floor(distance / (day)),
+   document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+   document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+   document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
-      // Update the countdown element
-      document.getElementById('countdown').textContent =
-        `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds remaining until March 30th, 2025.`;
-    } else {
-      // If the target date has passed
-      document.getElementById('countdown').textContent = "The target date has passed.";
-    }
-  }
-
-  // Update the countdown immediately and every 1 second
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+ //do something later when date is reached
+ if (distance < 0) {
+   document.getElementById("headline").innerText = "It's our wedding day!";
+   document.getElementById("countdown").style.display = "none";
+   document.getElementById("content").style.display = "block";
+   clearInterval(x);
+ }
+ //seconds
+}, 0)
+}());

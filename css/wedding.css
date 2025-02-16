@@ -170,6 +170,19 @@ main {
     text-align: center;
 }
 
+#countdown-section li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+  
+#countdown-section li span {
+    display: block;
+    font-size: 4.5rem;
+}
+
 .navbar {  
     display: flex;
     background-color: #7510F7;
