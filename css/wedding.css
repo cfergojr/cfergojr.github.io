@@ -174,7 +174,7 @@ main {
     display: inline-block;
     font-size: 1.5em;
     list-style-type: none;
-    padding: 1em;
+    padding: 1em 2em;
     text-transform: uppercase;
 }
   
@@ -420,12 +420,18 @@ textarea {
     .parallax h1 {
         font-size: 4rem;
     }
+
+    #countdown-section li {
+        font-size: calc(1.125rem * var(--smaller));
+        padding: 1em;
+      }
 }
 
 @media screen and (max-width: 768px) {
 
   #countdown-section li {
     font-size: calc(1.125rem * var(--smaller));
+    padding: .65em;
   }
   
   #countdown-section li span {
@@ -435,6 +441,10 @@ textarea {
 
 
 @media screen and (max-width: 400px) {
+
+    .masthead {
+        padding: 1rem;
+    }
     .navbar li {
         padding: 0 .5rem;
     }
