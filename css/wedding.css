@@ -160,27 +160,12 @@ main {
     padding: 0;
 }
 
-#countdown-section {
+.our-story {
     display: flex;
     width: 100%;
     background-color: #f3f3f3;
-    justify-content: center;
-    align-items: center;
     padding: 3rem 0;
-    text-align: center;
-}
 
-#countdown-section li {
-    display: inline-block;
-    font-size: 1.5em;
-    list-style-type: none;
-    padding: 1em 2em;
-    text-transform: uppercase;
-}
-  
-#countdown-section li span {
-    display: block;
-    font-size: 4.5rem;
 }
 
 .navbar {  
@@ -295,6 +280,12 @@ section h2::after {
     display: block;
     width: fit-content;
 
+}
+
+.photo-gallery-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 .story-container {
